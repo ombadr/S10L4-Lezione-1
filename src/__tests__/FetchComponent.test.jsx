@@ -36,3 +36,12 @@ describe('comportamento del filtro', () => {
     expect(elencoFiltrato).toHaveLength(1);
   });
 });
+
+/*
+le assertion più comuni sono: 
+1) .toBeInTheDocument() -> se l'elemento è presente nel documento
+2) .toBeVisible() -> se l'elemento è visibile
+3) .toContainHtml([tag html]) -> se l'elemento contiene il tag html specificato
+4) .toBeUndefined() -> se l'elemento è undefined o meno
+5) .toHaveLength([numero]) -> verifica la lunghezza di un'array  
+*/
