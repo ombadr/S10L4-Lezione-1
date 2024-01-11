@@ -24,6 +24,14 @@ describe('funzionamento del button', () => {
     expect(image).toBeInTheDocument();
   });
 
+  it('mostra didascalia button', () => {
+    render(<HiddenSection />);
+    const button = screen.getByText(/mostra contenuto/i);
+    fireEvent.click(button);
+    const button2 = screen.getByText(/nascondi contenuto/i);
+    expect(button2).toBeInTheDocument();
+  });
+
   it('scomparsa della card al successivo click del button', () => {
     render(<HiddenSection />);
     const button = screen.getByText(/mostra contenuto/i);
