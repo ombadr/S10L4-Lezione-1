@@ -26,9 +26,12 @@ describe('funzionamento del button', () => {
 
   it('scomparsa della card al successivo click del button', () => {
     render(<HiddenSection />);
-    const button = screen.getByText(/nascondi contenuto/i);
+    const button = screen.getByText(/mostra contenuto/i);
+    // Clicca una volta per mostrare il contenuto
+    fireEvent.click(button);
+    // Clicca un'altra volta per nascondere il contenuto
     fireEvent.click(button);
     const image = screen.queryByRole('img');
-    expect(image).not.toBeInTheDocument;
+    expect(image).not.toBeInTheDocument();
   });
 });
